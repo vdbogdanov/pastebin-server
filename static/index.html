@@ -2,7 +2,7 @@
 
 	<head>
 
-		<title>hastebin</title>
+		<title>Text Exchange</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="solarized_dark.css"/>
 		<link rel="stylesheet" type="text/css" href="application.css"/>
@@ -31,7 +31,7 @@
 			}, 1000);
 			// Construct app and load initial path
 			$(function() {
-				app = new haste('hastebin', { twitter: true });
+				app = new haste('Text Exchange', { twitter: false });
 				handlePop({ target: window });
 			});
 		</script>
@@ -43,9 +43,9 @@
 
 		<div id="key">
 		  <div id="pointer" style="display:none;"></div>
-			<div id="box1">
+			<!-- <div id="box1">
 				<a href="/about.md" class="logo"></a>
-			</div>
+			</div> -->
 			<div id="box2">
 				<button class="save function button-picture">Save</button>
 				<button class="new function button-picture">New</button>

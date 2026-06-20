@@ -1,8 +1,8 @@
 name: Close inactive issues and PRs
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "30 1 * * *"
+  # schedule:
+  #   - cron: "30 1 * * *"
 
 jobs:
   close-stale:
@@ -11,7 +11,7 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - uses: actions/stale@v3
+      - uses: actions/stale@v6
         with:
           days-before-stale: 30
           days-before-close: 14

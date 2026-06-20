@@ -11,7 +11,7 @@ COPY --chown=node:node . .
 
 RUN npm install && \
     npm install redis@0.8.1 && \
-    npm install pg@4.5.7 && \
+    npm install pg@8.11.3 && \
     npm install memcached@2.2.2 && \
     npm install aws-sdk@2.814.0 && \
     npm install rethinkdbdash@2.3.31
@@ -23,7 +23,7 @@ ENV STORAGE_TYPE=memcached \
     STORAGE_DB=2 \
     STORAGE_AWS_BUCKET= \
     STORAGE_AWS_REGION= \
-    STORAGE_USENAME= \
+    STORAGE_USERNAME= \
     STORAGE_PASSWORD= \
     STORAGE_FILEPATH=
 
@@ -33,12 +33,12 @@ ENV LOGGING_LEVEL=verbose \
 
 ENV HOST=0.0.0.0\
     PORT=7777\
-    KEY_LENGTH=10\
+    KEY_LENGTH=20\
     MAX_LENGTH=400000\
     STATIC_MAX_AGE=86400\
     RECOMPRESS_STATIC_ASSETS=true
 
-ENV KEYGENERATOR_TYPE=phonetic \
+ENV KEYGENERATOR_TYPE=random \
     KEYGENERATOR_KEYSPACE=
 
 ENV RATELIMITS_NORMAL_TOTAL_REQUESTS=500\
